@@ -8,11 +8,11 @@ def dir_path_root() -> str:
 
 
 def read_file(file_name):
-    file_path = os.path.join(dir_path_root(), file_name)
+    file_path = os.path.join(dir_path_root(), "dat", file_name)
     print(f"....trying to read file: {file_path}")
     with open(file_path, encoding="utf-8") as f:
         cts = f.read()
-        print(f"file contemts....{lines}")
+        print(f"file contemts....{cts}")
 
 # ---------------------------------------
 if __name__ == "__main__":
