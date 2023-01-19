@@ -12,12 +12,13 @@ def distance(p, g):
 
 
 def closest_grid_line(p, grid):
-    shortestDistance = 100
-    positionOfClosestGridLine = None
-    for g in range(len(grid)):
+    shortest_distance = 100
+    idx_of_closest_grid_line = None
+    for grid_idx in range(len(grid)):
+        dist = distance(p, grid[grid_idx])
 
-        if distance(p, grid[g]) < shortestDistance:
-            shortestDistance = distance(p, g)
-            positionOfClosestGridLine = g
+        if dist < shortest_distance:
+            shortest_distance = dist
+            idx_of_closest_grid_line = grid_idx
 
-    return positionOfClosestGridLine
+    return idx_of_closest_grid_line
