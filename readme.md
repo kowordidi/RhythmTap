@@ -9,5 +9,6 @@ This readme is formatted with [markdown](https://docs.github.com/en/get-started/
 ### todo
 * tests for man_file
 * test for main function - snap()
-* .....
+* read actual grid and sample pts from the files
+* guess what - tests for that then too :-)
 
