@@ -1,18 +1,17 @@
-from src.grid import distance
+from src.grid import distance, closest_grid_line
+
 
 def test_distance():
-    assert (distance(4, 5) == 1)
+    assert distance(4, 5) == 1
+    assert distance(5, 4) == 1
 
-    got_4_5 = distance(4, 5)
-    expect_4_5 = 1
-    compare = (got_4_5 == expect_4_5 )
-    assert(compare)
 
-    got_3_5 = distance(3, 5)
-    expect_3_5 = 2
-    assert (got_4_5 == expect_4_5 )
+def test_closest_grid_line():
+    aGrid = [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5]
+    assert closest_grid_line(0.3, aGrid) == 1
+    assert closest_grid_line(0, aGrid) == 0
+    assert closest_grid_line(4.9, aGrid) == 9
 
-    # assert(3==4)
 
 # ---------------------------------------
 if __name__ == "__main__":

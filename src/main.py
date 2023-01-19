@@ -11,6 +11,8 @@ def my_main():
     print("expected result: [1, 2, 3]")
     print("result:", snap(alistOfPoints, aGrid))
 
+
+
 # ---------------------------------------
 if __name__ == "__main__":
     my_main()

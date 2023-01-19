@@ -7,12 +7,8 @@ def snap(points, grid):
     return snapped
 
 
-
-
-
 def distance(p, g):
     return abs(p - g)
-
 
 
 def closest_grid_line(p, grid):
@@ -20,7 +16,7 @@ def closest_grid_line(p, grid):
     positionOfClosestGridLine = None
     for g in range(len(grid)):
 
-        if distance(p, g) < shortestDistance:
+        if distance(p, grid[g]) < shortestDistance:
             shortestDistance = distance(p, g)
             positionOfClosestGridLine = g
 
