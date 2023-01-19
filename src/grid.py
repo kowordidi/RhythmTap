@@ -16,7 +16,7 @@ def idx_of_closest_grid_line(p, grid):
     ret = None
     for grid_idx in range(len(grid)):
         dist = distance(p, grid[grid_idx])
-        
+
         def is_shorter(shortest_so_far, curr):
             return shortest_so_far is None or curr < shortest_so_far
 
