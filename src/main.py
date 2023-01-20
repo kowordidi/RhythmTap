@@ -1,4 +1,4 @@
-from src.grid import snap
+from src.functions import snap
 
 
 
