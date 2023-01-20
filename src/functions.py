@@ -29,21 +29,23 @@ def idx_of_closest_grid_line(p, grid):
 
 def generate_eight_grid(number_of_beats):
     grid = []
+    time_unit = 0
     for i in range(number_of_beats * 2):
-        i += 1/2
-        grid.append(i)
+        grid.append(time_unit)
+        time_unit += 1 / 2
     return grid
 
 
 def generate_triplet_grid(number_of_beats):
     grid = []
+    time_unit = 0
     for i in range(number_of_beats * 3):
-        i += 1/3
-        grid.append(i)
+        grid.append(time_unit)
+        time_unit += 1 / 3
     return grid
 
 
-def generate_grid(number_of_beats, grid_type):
+def generate_grid(grid_type, number_of_beats):
     if grid_type == 'triplet':
         return generate_triplet_grid(number_of_beats)
     else:

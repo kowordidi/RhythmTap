@@ -1,4 +1,4 @@
-from src.functions import distance, idx_of_closest_grid_line, snap
+from src.functions import distance, idx_of_closest_grid_line, snap, generate_grid
 
 
 def test_distance():
@@ -17,6 +17,11 @@ def test_snap():
     assert snap([0], [0]) == [0]
     assert snap([1.5, 2.6, 9], [1, 2, 3]) == [1, 3, 3]
     assert snap([0.8, 2, 3.1], [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5]) == [1, 2, 3]
+
+
+def test_generate_grid():
+    assert generate_grid('triplet', 1) == [0, 0.3333333333333333, 0.6666666666666666]
+    assert generate_grid('eighth', 4) == [0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5]
 
 
 # ---------------------------------------
