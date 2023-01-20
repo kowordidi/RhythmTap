@@ -2,7 +2,7 @@ def snap(points, grid):
     snapped = []
 
     for p in points:
-        snapped.append(idx_of_closest_grid_line(p, grid))
+        snapped.append(grid[idx_of_closest_grid_line(p, grid)])
 
     return snapped
 

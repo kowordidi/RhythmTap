@@ -8,11 +8,6 @@ def my_main():
     a_grid = [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5]
 
 
-    print("expected result: [1, 2, 3]")
-    print("result:", snap(a_list_of_points, a_grid))
-
-
-
 # ---------------------------------------
 if __name__ == "__main__":
     my_main()
