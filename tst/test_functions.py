@@ -20,10 +20,11 @@ def test_snap():
 
 
 def test_generate_grid():
-    assert generate_grid('triplet', 1) == [0, 0.3333333333333333, 0.6666666666666666]
-    assert generate_grid('eighth', 4) == [0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5]
+    assert generate_grid(2, 4) == [0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5]
+    assert generate_grid(3, 1) == [0, 0.3333333333333333, 0.6666666666666666]
 
 
 # ---------------------------------------
 if __name__ == "__main__":
     test_distance()
+# ask daddy why I need this in particular

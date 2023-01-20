@@ -1,3 +1,4 @@
+from src.man_file import read_file
 def snap(points, grid):
     snapped = []
 
@@ -27,26 +28,17 @@ def idx_of_closest_grid_line(p, grid):
     return ret
 
 
-def generate_eight_grid(number_of_beats):
+def generate_grid(even_notes_per_beat, number_of_beats):
     grid = []
     time_unit = 0
-    for i in range(number_of_beats * 2):
+    for i in range(number_of_beats * even_notes_per_beat):
         grid.append(time_unit)
-        time_unit += 1 / 2
+        time_unit += 1 / even_notes_per_beat
     return grid
 
 
-def generate_triplet_grid(number_of_beats):
-    grid = []
-    time_unit = 0
-    for i in range(number_of_beats * 3):
-        grid.append(time_unit)
-        time_unit += 1 / 3
-    return grid
+def read_inputs():
+    string_input = read_file('input.txt')
+    array_input = string_input.split()
+    return array_input
 
-
-def generate_grid(grid_type, number_of_beats):
-    if grid_type == 'triplet':
-        return generate_triplet_grid(number_of_beats)
-    else:
-        return generate_eight_grid(number_of_beats)

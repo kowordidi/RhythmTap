@@ -14,9 +14,8 @@ def read_file(file_name):
     print(f"....trying to read file: {file_path}")
     with open(file_path, encoding="utf-8") as f:
         cts = f.read()
-        print(f"file contents....{cts}")
-
+    return cts
 
 # ---------------------------------------
 if __name__ == "__main__":
-    read_file("eight_grid.txt")
+    read_file("input.txt")
