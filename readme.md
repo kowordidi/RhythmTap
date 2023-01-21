@@ -8,4 +8,6 @@ This readme is formatted with [markdown](https://docs.github.com/en/get-started/
 
 ### todo
 * tests for man_file
+* build logic for snapping input with correct grid length
+* find a way to also snap to triplet grid
 
