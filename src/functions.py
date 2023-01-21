@@ -1,4 +1,6 @@
 from src.man_file import read_file
+
+
 def snap(points, grid):
     snapped = []
 
@@ -39,6 +41,9 @@ def generate_grid(even_notes_per_beat, number_of_beats):
 
 def read_inputs():
     string_input = read_file('input.txt')
-    array_input = string_input.split()
-    return array_input
+    string_input_array = string_input.split()
+    float_input_array = []
+    for i in range(len(string_input_array)):
+        float_input_array.append(float(string_input_array[i]))
+    return float_input_array
 
