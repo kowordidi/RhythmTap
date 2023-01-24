@@ -1,4 +1,4 @@
-from src.functions import distance, idx_of_closest_grid_line, snap, generate_grid
+from src.snap_functions import distance, idx_of_closest_grid_line, snap, generate_grid
 
 
 def test_distance():
