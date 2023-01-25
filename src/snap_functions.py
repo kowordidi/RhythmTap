@@ -48,10 +48,10 @@ def generate_grid(number_of_beats):
             grid[idx] = round(grid[idx], 4)
         return grid
 
-    eighth_grid = part_of_grid(2)
+    thirtysecond_grid = part_of_grid(8)
     triplet_grid = part_of_grid(3)
 
-    full_grid = sorted(set(eighth_grid + triplet_grid))
+    full_grid = sorted(set(thirtysecond_grid + triplet_grid))
 
     return full_grid
 

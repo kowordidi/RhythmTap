@@ -1,5 +1,6 @@
 from src.snap_functions import read_inputs, snap, generate_grid, CONST_NUMBER_OF_BEATS
-from src.man_file import read_file
+from src.note_value_functions import name_list
+
 
 
 def my_main():
@@ -10,6 +11,8 @@ def my_main():
     print(f'this is the input received: {points}')
     print('this is the expected result: [0, 0.3333, 0.6667, 1.0, 1.5, 2.0, 3.0]')
     print(f'this is the result:{res}')
+
+    print(name_list(res))
 
 
 # ---------------------------------------
